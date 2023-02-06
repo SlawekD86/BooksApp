@@ -12,7 +12,6 @@
 <body>
   <main>
     <div class="container">
-
       <!-- FILTERS FORM -->
       <section class="filters">
         <div>
@@ -24,7 +23,6 @@
           </label>
         </div>
       </section>
-
       <!-- BOOKS PANEL -->
       <section class="books-panel">
         <h1>Your collection</h1>
@@ -33,17 +31,14 @@
       </section>
     </div>
   </main>
-
   <!-- BOOK TEMPLATE -->
   <script id="template-book" type="text/x-handlebars-template">
     <li class="book">
-
       <!-- title and price -->
       <header class="book__header">
         <h2 class="book__name">{{ name }}</h2>
         <p class="product__base-price no-spacing">${{ price }}</p>
       </header>
-
       <!-- cover image -->
       <a href="#" class="book__image" data-id="{{ id }}">
         <figure>
@@ -53,15 +48,12 @@
 
       <!-- ratings -->
       <div class="book__rating">
-        <div class="book__rating__fill">
+        <div class="book__rating__fill" style="width: {{ ratingWidth }}%; background: {{ ratingBgc }}">;
           {{ rating }}/10
         </div>
       </div>
-
-
     </li>
   </script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="js/functions.js"></script>
   <script src="js/data.js"></script>
